@@ -29,13 +29,21 @@ public class Java02_programersCustomExam {
 //			if(i%5==0) {
 //				System.out.println(i + "의 값은 5의 배수 입니다!");
 //			}
-//		//1부터 매개변수 num 까지 범위 내에서
+//		[1]
+		//1부터 매개변수 num 까지 범위 내에서
 //		//2의 배수, 3의 배수, 4의 배수, 5의 배수의 경우
 //		//각각
 //		//System.out.println(i+"의 값은 ?배수 입니다!")
 //		//문구를 출력하고, main 메서드에서
+//	    [2]
 //		//examEvenAndOddCustom return값인 3의 배수, 4의 배수, 5의 배수
 //		//개수를 double타입의 숫자로 출력하시오
+//		[3]
+//		2,3,4,5의 배수의 갯수 중에 2번째로 많은 배수의 갯수를 가진
+//		?배수의 이름을 출력하시오 (단, 지금까지 배웠던 내용을 활용하여 작성하세요)
+	
+		
+
 //		double count = 2+3+4+5;
 //		//int num은 double로 자동형변환(casting)이 가능함
 //		//num앞에 (byte)를 붙이면 byte로 강제형변환 가능
