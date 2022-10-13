@@ -1,0 +1,75 @@
+1번
+	for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr[i].length; j++) {
+				arr[i][j] = 1;
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+
+2번
+int[][] arr = new int[3][3];
+		int a = 0;
+		for(int i=0; i<arr.length; i++) {
+			a = i+1;
+			for(int j=0; j<arr[i].length; j++) {
+				arr[i][j] = a+1;
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+
+3번
+int a = 0;
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr[i].length; j++) {
+				a = j+1;
+				arr[i][j] = a;
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+
+4번
+		int[][] arr = new int[3][3];
+		int a = 0;
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr[i].length; j++) {
+				a = a+1;
+				arr[i][j] = a;
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+5번
+int[][] arr = new int[3][3];
+		int a = 0;
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr[i].length; j++) {
+				a = (i+1)+(j*3);
+				arr[i][j] = a;
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println(" ");
+		}
+	}
+
+}
+
+
+6번
+for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr[i].length; j++) {
+				arr[i][j] = (9-j)-(i*3);
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println(" ");
+		}
+
+
+7번
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr[i].length; j++) {
+				arr[i][j] = (9-i)-(j*3);
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println(" ");
+		}
