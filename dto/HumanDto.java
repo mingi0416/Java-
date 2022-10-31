@@ -1,57 +1,29 @@
 package com.human.dto;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
+//dto에 추가해야 할 것들
+//1. getter, setter
+//2. 생성자
+//3. equals hashcode
+//4. toString
 public class HumanDto {
-	private String name = null;
-//	private int age = 0;
-	private Integer age = null;
-//	private double height = 0;
-	private Double height = null;
-	private LocalDateTime birthday = null;
-	//wrapper class 기본자료형을 클래스로 표현한 클래스 
-	//null을 사용하거나 관련정보를 추가하기 위해서 사용
-	
-	public Integer myAge=0;
+	private String name;
+	private Integer age;
+	private Double height;
+	private LocalDateTime birthday;
 	
 	
-	public Integer getMyAge() {
-		return myAge;
-	}
-	public void setMyAge(Integer myAge) {
-		if(myAge<0) {
-			System.out.println("나이에 음수를 넣을수 없습니다. 0으로 셋팅합니다");
-			myAge=0;
-		}else if(myAge>150) {
-			System.out.println("나이가 너무 많습니다. 0으로 셋팅합니다");
-			myAge=0;
-		}
-		this.myAge = myAge;
-	}
 	
-	public void myPrint() {
-		System.out.println("이름 : " + name);
-		System.out.println("나이 : " + age);
-		System.out.println("키 : " + height);
-		System.out.println("생일 : " + birthday);
-		if(birthday!=null) {
-		System.out.println("생일 : " + birthday.format(
-				DateTimeFormatter.ofPattern("yyyy-MM-dd")));
-		}
-	}
-	//toString
 	@Override
 	public String toString() {
 		return "HumanDto [name=" + name + ", age=" + age + ", height=" + height + ", birthday=" + birthday + "]";
 	}
-	
 	@Override
 	public int hashCode() {
-		return Objects.hash(age, birthday, height, name);
+		return Objects.hash(name);
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -61,22 +33,25 @@ public class HumanDto {
 		if (getClass() != obj.getClass())
 			return false;
 		HumanDto other = (HumanDto) obj;
-		return Objects.equals(age, other.age) && Objects.equals(birthday, other.birthday)
-				&& Objects.equals(height, other.height) && Objects.equals(name, other.name);
+		return Objects.equals(name, other.name);
 	}
-
-	//생성자
-	public HumanDto() {} 
+	public HumanDto() {}
 	
-	//HumanDto dto = new HumanDto(); 
-	//생성자에 변화를 주면 기본생성자가 없으면 동작하지 않는다.
 	public HumanDto(String name, Integer age, Double height, LocalDateTime birthday) {
+		super();
 		this.name = name;
 		this.age = age;
 		this.height = height;
 		this.birthday = birthday;
 	}
-	//getter, setter
+	
+	public HumanDto(HumanDto dto) {
+		super();
+		this.name = dto.name;
+		this.age = dto.age;
+		this.height = dto.height;
+		this.birthday = dto.birthday;
+	}
 	public String getName() {
 		return name;
 	}
@@ -101,7 +76,6 @@ public class HumanDto {
 	public void setBirthday(LocalDateTime birthday) {
 		this.birthday = birthday;
 	}
-	
 	
 	
 }
